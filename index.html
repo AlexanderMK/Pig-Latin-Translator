@@ -6,18 +6,39 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
-
     <title>Pig Latin</title>
   </head>
 
   <body>
+    <h2> Specifications </h2>
+      <h4>Add "ay" to words begining with a vowel</h4>
+         <ul>
+           <li>Example: apple</li>
+           <li>Outcome: appleay</li>
+         </ul>
+       <h4>Words beginning with one or more consonants, move all of the first consecutive consonants to the end, and add "ay". </h4>
+         <ul>
+           <li>Example: thread</li>
+           <li>Outcome: eadtheay</li>
+         </ul>
+       <h4>Move all of the first consecutive consonants to the end, and add "ay".  If the first consonants include "qu", move the "u" along with the "q".</h4>
+         <ul>
+           <li>Example: squirt</li>
+           <li>Outcome: irtsquay</li>
+         </ul>
+       <h4>For words begining with "y", treat "y" as a consonant and move the consonant to the end</h4>
+         <ul>
+           <li>Example: Yawn</li>
+           <li>Outcome: awyay</li>
+         </ul>
+
      <form>
        <h2> Original Text</h2>
        <textarea id="original" style="width:60%; height:15%;">Instert Text</textarea>
        <input type="button" onclick="returns testTranslate('original, 'translated)" name="Translate" value="Translate" />
-
        <h2> Translated Text</h2>
        <div id="translated"></div>
+
      </form>
    </body>
   </html>
